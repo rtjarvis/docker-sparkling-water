@@ -13,11 +13,11 @@ RUN apt-get update
 RUN echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 
 # and install java 7 oracle jdk
-RUN apt-get -y install oracle-java7-installer && apt-get clean
-RUN apt-get -y install oracle-java7-set-default
+RUN apt-get -y install oracle-java7-installer --no-install-recommends && apt-get clean
+RUN apt-get -y install oracle-java7-set-default --no-install-recommends
 
 # Install additional tools
-RUN apt-get -y install \
+RUN apt-get -y install --no-install-recommends \
   less \
   curl \
   vim-tiny \
