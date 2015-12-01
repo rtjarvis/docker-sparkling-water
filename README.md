@@ -3,7 +3,7 @@
 ## To get associated Docker image
 
 ```
-docker pull mikefaille/ubuntu-sparkling-water
+$ docker pull mikefaille/ubuntu-sparkling-water
 ```
 
 ## Run bash inside container
