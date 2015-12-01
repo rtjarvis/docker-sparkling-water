@@ -32,9 +32,9 @@ RUN curl -s https://archive.apache.org/dist/spark/spark-1.5.2/spark-1.5.2-bin-cd
     chmod 0777 /opt/spark/work
 
 # Install Sparkling water latest version
-RUN curl -s http://h2o-release.s3.amazonaws.com/sparkling-water/master/103/sparkling-water-0.2.103.zip --output sw.zip && \
+RUN curl -s http://h2o-release.s3.amazonaws.com/sparkling-water/rel-1.5/6/sparkling-water-1.5.6.zip --output sw.zip && \
   unzip sw.zip -d /opt/ && \
-  ln -s /opt/sparkling-water-0.2.103 /opt/sparkling-water && \
+  ln -s /opt/sparkling-water-1.5.6 /opt/sparkling-water && \
   rm -f sw.zip
 
 # Setup environment
