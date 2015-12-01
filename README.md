@@ -1,10 +1,15 @@
 # Docker Support
 
+## To get associated Docker image
+
+```
+docker pull mikefaille/ubuntu-sparkling-water
+```
 
 ## Run bash inside container
 
 ```
-$ docker run  -i -t ubuntu-sparkling-water-test-base /bin/bash
+$ docker run  -i -t mikefaille/ubuntu-sparkling-water /bin/bash
 ```
 
 Configure the Spark cluster:
@@ -32,12 +37,11 @@ val hc = new H2OContext(sc).start()
 ## Run Sparkling Shell inside container
 
 ```
-docker run -i -t --rm ubuntu-sparkling-test-base bin/sparkling-shell 
+docker run -i -t --rm mikefaille/ubuntu-sparkling-water bin/sparkling-shell 
 ```
 
 ## Running examples in container
 
 ```
-docker run -i -t --rm ubuntu-sparkling-test-base bin/run-example.sh
+docker run -i -t --rm mikefaille/ubuntu-sparkling-water bin/run-example.sh
 ```
-
