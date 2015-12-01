@@ -26,15 +26,15 @@ RUN apt-get -y install \
   unzip
 
 # Install Spark 1.2.0
-RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-1.2.0-bin-cdh4.tgz | tar -xz -C /opt && \
-    ln -s /opt/spark-1.2.0-bin-cdh4 /opt/spark && \
+RUN curl -s https://archive.apache.org/dist/spark/spark-1.5.2/spark-1.5.2-bin-cdh4.tgz | tar -xz -C /opt && \
+    ln -s /opt/spark-1.5.2-bin-cdh4 /opt/spark && \
     mkdir /opt/spark/work && \
     chmod 0777 /opt/spark/work
 
 # Install Sparkling water latest version
-RUN curl -s http://h2o-release.s3.amazonaws.com/sparkling-water/master/75/sparkling-water-0.2.10-75.zip --output sw.zip && \
+RUN curl -s http://h2o-release.s3.amazonaws.com/sparkling-water/master/103/sparkling-water-0.2.103.zip --output sw.zip && \
   unzip sw.zip -d /opt/ && \
-  ln -s /opt/sparkling-water-0.2.10-75 /opt/sparkling-water && \
+  ln -s /opt/sparkling-water-0.2.103 /opt/sparkling-water && \
   rm -f sw.zip
 
 # Setup environment
