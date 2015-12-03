@@ -25,7 +25,7 @@ RUN apt-get -y install --no-install-recommends \
   openssh-server \
   unzip
 
-# Install Spark 1.2.0
+# Install Spark 1.5.2
 RUN curl -s https://archive.apache.org/dist/spark/spark-1.5.2/spark-1.5.2-bin-cdh4.tgz | tar -xz -C /opt && \
     ln -s /opt/spark-1.5.2-bin-cdh4 /opt/spark && \
     mkdir /opt/spark/work && \
