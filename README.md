@@ -1,15 +1,15 @@
-# H2O's Sparkling water - Docker Support
+# H2O's Sparkling water with Spark 2.1.0, H2O 2.1.8 and Java 8 - Docker Support
 
 ## To get associated Docker image
 
 ```
-$ docker pull mikefaille/ubuntu-sparkling-water
+$ docker pull rtjarvis/ubuntu-sparkling-water
 ```
 
 ## Run bash inside container
 
 ```
-$ docker run  -i -t -p 54333:54333 mikefaille/ubuntu-sparkling-water /bin/bash
+$ docker run  -i -t -p 54333:54333 rtjarvis/ubuntu-sparkling-water /bin/bash
 ```
 
 Configure the Spark cluster:
