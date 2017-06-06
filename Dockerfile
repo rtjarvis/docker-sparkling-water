@@ -1,20 +1,4 @@
-FROM ubuntu:15.10
-
-# Repo
-#RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-# Java 8 installation from Oracle
-RUN apt install  --no-install-recommends software-properties-common -y && apt-add-repository ppa:webupd8team/java
-
-# Upgrade package index
-RUN apt-get update
-# RUN apt-get -y upgrade
-
-# automatically accept oracle license
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-
-# and install java 8 oracle jdk
-RUN apt-get -y install oracle-java8-installer --no-install-recommends && apt-get clean
-RUN apt-get -y install oracle-java8-set-default --no-install-recommends
+FROM frolvlad/alpine-oraclejdk8
 
 # Install additional tools
 RUN apt-get -y install --no-install-recommends \
